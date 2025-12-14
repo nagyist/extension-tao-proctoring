@@ -212,7 +212,7 @@ class DeliveryExecutionManagerService extends ConfigurableService
                     // The duration store contains durations (time spent) on test, testPart(s) and assessmentSection(s).
                     $durationStore = $testSession->getDurationStore();
 
-                    $offsetDuration = new QtiDuration("PT${extraTime}S");
+                    $offsetDuration = new QtiDuration("PT{$extraTime}S");
                     $testDefinition = $testSession->getAssessmentTest();
                     $currentDuration = $durationStore[$testDefinition->getIdentifier()];
 
@@ -225,7 +225,7 @@ class DeliveryExecutionManagerService extends ConfigurableService
                     }
 
                     // Replace test duration with new duration.
-                    $durationStore[$testDefinition->getIdentifier()] = new QtiDuration("PT${newSeconds}S");
+                    $durationStore[$testDefinition->getIdentifier()] = new QtiDuration("PT{$newSeconds}S");
 
                     $testSessionService->persist($testSession);
                     $maxTime = $this->getPartTimeLimits($testSession, $testDefinition);

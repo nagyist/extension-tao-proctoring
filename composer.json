@@ -1,42 +1,41 @@
 {
-
-    "name": "oat-sa/extension-tao-proctoring",
-    "description" : "Proctoring for deliveries",
-    "type" : "tao-extension",
-    "authors" : [
-        {
-            "name": "Open Assessment Technologies SA"
-        }
-    ],
-    "keywords" : [
-        "tao",
-        "computer-based-assessment"
-    ],
-    "homepage" : "http://www.taotesting.com",
-    "license" : [
-        "GPL-2.0-only"
-    ],
-    "extra" : {
-        "tao-extension-name" : "taoProctoring"
-    },
-    "minimum-stability" : "dev",
-    "require": {
-        "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-        "sinergi/browser-detector": "^6.0.2",
-        "oat-sa/generis" : ">=15.22",
-        "oat-sa/tao-core" : ">=54.0.0",
-        "oat-sa/extension-tao-delivery-rdf" : ">=14.0.0",
-        "oat-sa/extension-tao-delivery" : ">=15.0.0",
-        "oat-sa/extension-tao-eventlog" : ">=3.0.0",
-        "oat-sa/extension-tao-outcomeui" : ">=10.0.0",
-        "oat-sa/extension-tao-testqti" : ">=41.0.0",
-        "oat-sa/extension-tao-testtaker" : ">=8.0.0",
-        "oat-sa/extension-tao-test" : ">=15.0.0",
-        "oat-sa/lib-tao-dtms" : "^1.0.1"
-    },
-    "autoload" : {
-        "psr-4" : {
-            "oat\\taoProctoring\\" : ""
-        }
+  "name": "oat-sa/extension-tao-proctoring",
+  "description": "Proctoring for deliveries",
+  "type": "tao-extension",
+  "authors": [
+    {
+      "name": "Open Assessment Technologies SA"
     }
+  ],
+  "keywords": [
+    "tao",
+    "computer-based-assessment"
+  ],
+  "homepage": "http://www.taotesting.com",
+  "license": [
+    "GPL-2.0-only"
+  ],
+  "extra": {
+    "tao-extension-name": "taoProctoring"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
+    "sinergi/browser-detector": "^6.0.2",
+    "oat-sa/generis": "dev-goal/remove-prophesize as 99.99",
+    "oat-sa/tao-core": ">=54.0.0",
+    "oat-sa/extension-tao-delivery-rdf": ">=14.0.0",
+    "oat-sa/extension-tao-delivery": ">=15.0.0",
+    "oat-sa/extension-tao-eventlog": ">=3.0.0",
+    "oat-sa/extension-tao-outcomeui": ">=10.0.0",
+    "oat-sa/extension-tao-testqti": ">=41.0.0",
+    "oat-sa/extension-tao-testtaker": ">=8.0.0",
+    "oat-sa/extension-tao-test": ">=15.0.0",
+    "oat-sa/lib-tao-dtms": "^1.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "oat\\taoProctoring\\": ""
+    }
+  }
 }
