@@ -27,6 +27,7 @@ use common_exception_NotFound;
 use common_persistence_SqlPersistence;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\DBAL\Query\QueryBuilder;
+use Doctrine\DBAL\Result;
 use Exception;
 use oat\generis\model\OntologyAwareTrait;
 use oat\generis\persistence\PersistenceManager;
@@ -149,9 +150,10 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
             $sql = $this->getPersistence()->getPlatForm()->limitStatement($sql, $options['limit'], $options['offset']);
         }
 
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($sql, $this->queryParams);
 
-        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $data = $stmt->fetchAllAssociative();
 
         foreach ($data as &$row) {
             $extraData = [];
@@ -186,10 +188,11 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
 
         $sql = sprintf('select count(*) from %s t %s', self::TABLE_NAME, $whereClause);
 
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($sql, $this->queryParams);
-        $result = $stmt->fetch(PDO::FETCH_BOTH);
+        $result = $stmt->fetchOne();
 
-        return (int) $result[0];
+        return (int) $result;
     }
 
     /**
@@ -289,8 +292,9 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
         $countQueryBuilder = $this->getQueryBuilder();
         $countQueryBuilder->select('count(grouped.delivery_id)');
         $countQueryBuilder->from('(' . $groupedSql . ')', 'grouped');
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($countQueryBuilder->getSQL());
-        return $stmt->fetch(PDO::FETCH_COLUMN);
+        return $stmt->fetchOne();
     }
 
     /**
@@ -376,8 +380,9 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
         }
         $limitQueryBuilder->andWhere('limit_q.delivery_id IS NOT NULL');
         $limitSql = $limitQueryBuilder->getSQL();
+        /** @var Result $stmtLimit */
         $stmtLimit = $this->getPersistence()->query($limitSql, $paramsValues);
-        $dataLimit = $stmtLimit->fetchAll(PDO::FETCH_COLUMN);
+        $dataLimit = $stmtLimit->fetchFirstColumn();
 
 
         $queryBuilder = $this->getQueryBuilder();
@@ -454,8 +459,9 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
 
         $sql = $outerQueryBuilder->getSQL();
 
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($sql, $paramsValues);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAllAssociative();
     }
 
     public function deleteDeliveryExecutionData(DeliveryExecutionDeleteRequest $request): bool
@@ -540,7 +546,7 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
             ->where(self::DELIVERY_EXECUTION_ID . '= :id')
             ->setParameter('id', $deliveryExecutionId);
 
-        $data = $qb->execute()->fetch(PDO::FETCH_ASSOC);
+        $data = $qb->executeQuery()->fetchAssociative();
 
         if ($data === false) {
             $data = [];
@@ -666,7 +672,33 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
             self::COLUMN_DELIVERY_EXECUTION_ID
         );
 
+        $params = $this->bindMissingNamedParameters($sql, $params);
         return $this->getPersistence()->exec($sql, $params);
+    }
+
+    /**
+     * Ensure every named parameter in the SQL has a bound value and keys match
+     * DBAL expectation (name without colon). Avoids "Named parameter X does not have a bound value".
+     *
+     * @param string $sql
+     * @param array $params
+     * @return array<string, mixed>
+     */
+    private function bindMissingNamedParameters(string $sql, array $params): array
+    {
+        if (preg_match_all('/:(\w+)/', $sql, $matches)) {
+            foreach (array_unique($matches[1]) as $name) {
+                $keyWithColon = ':' . $name;
+                if (!array_key_exists($keyWithColon, $params) && !array_key_exists($name, $params)) {
+                    $params[$name] = null;
+                }
+            }
+        }
+        $normalized = [];
+        foreach ($params as $key => $value) {
+            $normalized[strpos((string) $key, ':') === 0 ? substr((string) $key, 1) : $key] = $value;
+        }
+        return $normalized;
     }
 
     /**

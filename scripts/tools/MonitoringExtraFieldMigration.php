@@ -197,7 +197,7 @@ class MonitoringExtraFieldMigration extends ScriptAction
         );
         $stmt = $this->monitoringService->getPersistence()->query($sql, array_keys($deliveryExecutions));
 
-        $kvData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $kvData = $stmt->fetchAllAssociative();
         foreach ($kvData as $data) {
             $deliveryExecutions[$data['parent_id']]->addValue($data['monitoring_key'], $data['monitoring_value']);
         }

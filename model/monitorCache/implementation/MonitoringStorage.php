@@ -22,7 +22,7 @@
 
 namespace oat\taoProctoring\model\monitorCache\implementation;
 
-use Doctrine\DBAL\DBALException;
+use Doctrine\DBAL\Exception as DBALException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use oat\generis\persistence\PersistenceManager;
 use oat\taoDelivery\model\execution\DeliveryExecutionInterface;
@@ -180,7 +180,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
             ->from(self::TABLE_NAME)
             ->where(self::DELIVERY_EXECUTION_ID . '= :deid')
             ->setParameter('deid', $deliveryExecutionId);
-        $data = $qb->execute()->fetch(\PDO::FETCH_ASSOC);
+        $data = $qb->executeQuery()->fetchAssociative();
         $kvData = $this->getKvData([$deliveryExecutionId]);
         if (isset($kvData[$deliveryExecutionId])) {
             $data =  array_merge($data, $kvData[$deliveryExecutionId]);
@@ -310,7 +310,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
 
         $stmt = $this->getPersistence()->query($sql, $this->queryParams);
 
-        $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $data = $stmt->fetchAllAssociative();
 
         if ($options['asArray']) {
             $result = $data;
@@ -347,8 +347,8 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
             'GROUP BY t.' . self::DELIVERY_EXECUTION_ID . ') as count_q';
 
         $stmt = $this->getPersistence()->query($sql, $this->queryParams);
-        $result = $stmt->fetch(\PDO::FETCH_BOTH);
-        return intval($result[0]);
+        $result = $stmt->fetchOne();
+        return (int) $result;
     }
 
     /**
@@ -447,6 +447,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         $sql = "UPDATE " . self::TABLE_NAME . " SET $setClause
         WHERE " . self::COLUMN_DELIVERY_EXECUTION_ID . '=:delivery_execution_id';
 
+        $params = $this->bindMissingNamedParameters($sql, $params);
         $rowsUpdated = $this->getPersistence()->exec($sql, $params);
 
         return $rowsUpdated;
@@ -478,7 +479,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         $params = array_merge([$id], array_keys($kvTableData));
 
         $stmt = $this->getPersistence()->query($query, $params);
-        $existent = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $existent = $stmt->fetchAllAssociative();
         $existent = array_combine(
             array_column($existent, self::KV_COLUMN_KEY),
             array_column($existent, self::KV_COLUMN_VALUE)
@@ -597,7 +598,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
             $kvColumns = $this
                 ->getPersistence()
                 ->query('SELECT DISTINCT monitoring_key FROM kv_delivery_monitoring')
-                ->fetchAll(\PDO::FETCH_COLUMN);
+                ->fetchFirstColumn();
             //remove columns which presented in primary columns list
             $cache->set($key, json_encode($kvColumns));
         } else {
@@ -665,6 +666,31 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
     }
 
     /**
+     * Ensure every named parameter in the SQL has a bound value and keys match
+     * DBAL expectation (name without colon). Avoids "Named parameter X does not have a bound value".
+     *
+     * @param string $sql
+     * @param array $params
+     * @return array
+     */
+    protected function bindMissingNamedParameters($sql, array $params)
+    {
+        if (preg_match_all('/:(\w+)/', $sql, $matches)) {
+            foreach (array_unique($matches[1]) as $name) {
+                $keyWithColon = ':' . $name;
+                if (!array_key_exists($keyWithColon, $params) && !array_key_exists($name, $params)) {
+                    $params[$name] = null;
+                }
+            }
+        }
+        $normalized = [];
+        foreach ($params as $key => $value) {
+            $normalized[strpos($key, ':') === 0 ? substr($key, 1) : $key] = $value;
+        }
+        return $normalized;
+    }
+
+    /**
      * Get list of table column names
      * @return array
      */
@@ -720,7 +746,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
                 WHERE ' . self::KV_COLUMN_PARENT_ID . ' IN(' . join(',', array_map(function () {
             return '?';
         }, $ids)) . ')';
-        $secondaryData = $this->getPersistence()->query($sql, $ids)->fetchAll(\PDO::FETCH_ASSOC);
+        $secondaryData = $this->getPersistence()->query($sql, $ids)->fetchAllAssociative();
 
         foreach ($secondaryData as $data) {
             $result[$data[self::KV_COLUMN_PARENT_ID]][$data[self::KV_COLUMN_KEY]] = $data[self::KV_COLUMN_VALUE];
@@ -837,7 +863,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
             "SELECT " . self::COLUMN_DELIVERY_EXECUTION_ID . PHP_EOL .
             "FROM " . self::TABLE_NAME . PHP_EOL .
             "WHERE " . self::COLUMN_DELIVERY_EXECUTION_ID . "=?)";
-        $exists = $this->getPersistence()->query($sql, [$deliveryExecutionId])->fetch(\PDO::FETCH_COLUMN);
+        $exists = $this->getPersistence()->query($sql, [$deliveryExecutionId])->fetchOne();
 
         return !((bool) $exists);
     }
@@ -881,7 +907,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         $countQueryBuilder->select('count(grouped.delivery_id)');
         $countQueryBuilder->from('(' . $groupedSql . ')', 'grouped');
         $stmt = $this->getPersistence()->query($countQueryBuilder->getSQL());
-        $count = $stmt->fetch(\PDO::FETCH_COLUMN);
+        $count = $stmt->fetchOne();
         return $count;
     }
 
@@ -966,7 +992,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         $limitQueryBuilder->andWhere('limit_q.delivery_id IS NOT NULL');
         $limitSql = $limitQueryBuilder->getSQL();
         $stmtLimit = $this->getPersistence()->query($limitSql, $paramsValues);
-        $dataLimit = $stmtLimit->fetchAll(\PDO::FETCH_COLUMN);
+        $dataLimit = $stmtLimit->fetchFirstColumn();
 
 
         $queryBuilder = $this->getQueryBuilder();
@@ -1044,7 +1070,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         $sql = $outerQueryBuilder->getSQL();
 
         $stmt = $this->getPersistence()->query($sql, $paramsValues);
-        $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $data = $stmt->fetchAllAssociative();
 
         return $data;
     }

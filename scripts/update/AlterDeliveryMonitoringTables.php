@@ -115,7 +115,7 @@ class AlterDeliveryMonitoringTables extends \common_ext_action_InstallAction
     protected function updateLinks()
     {
         $stmt = $this->persistence->query('SELECT * FROM delivery_monitoring');
-        $parentRows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $parentRows = $stmt->fetchAllAssociative();
 
         foreach ($parentRows as $parentRow) {
             $this->persistence->exec("UPDATE kv_delivery_monitoring SET parent_id=?
