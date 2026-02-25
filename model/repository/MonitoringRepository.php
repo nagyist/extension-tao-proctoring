@@ -29,6 +29,7 @@ use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Result;
 use Exception;
+use InvalidArgumentException;
 use oat\generis\model\OntologyAwareTrait;
 use oat\generis\persistence\PersistenceManager;
 use oat\oatbox\service\ConfigurableService;
@@ -687,11 +688,18 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
     private function bindMissingNamedParameters(string $sql, array $params): array
     {
         if (preg_match_all('/:(\w+)/', $sql, $matches)) {
+            $missing = [];
             foreach (array_unique($matches[1]) as $name) {
                 $keyWithColon = ':' . $name;
                 if (!array_key_exists($keyWithColon, $params) && !array_key_exists($name, $params)) {
-                    $params[$name] = null;
+                    $missing[] = $name;
                 }
+            }
+            if ($missing !== []) {
+                $snippet = strlen($sql) > 200 ? substr($sql, 0, 200) . '...' : $sql;
+                throw new InvalidArgumentException(
+                    'Missing named parameter(s) for SQL: ' . implode(', ', $missing) . '. SQL snippet: ' . $snippet
+                );
             }
         }
         $normalized = [];
