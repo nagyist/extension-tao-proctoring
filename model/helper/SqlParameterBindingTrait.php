@@ -70,16 +70,16 @@ trait SqlParameterBindingTrait
             $normalizedKey = $hasLeadingColon ? substr($keyStr, 1) : $key;
             $counterpart = $hasLeadingColon ? $normalizedKey : ':' . $keyStr;
             if (array_key_exists($counterpart, $params) && $params[$counterpart] !== $value) {
-                throw new InvalidArgumentException(
-                    sprintf(
-                        'Conflicting named parameter "%s": both ":%s" and "%s" are present with different values (%s vs %s).',
-                        $normalizedKey,
-                        $normalizedKey,
-                        $normalizedKey,
-                        self::formatParamValue($value),
-                        self::formatParamValue($params[$counterpart])
-                    )
+                $msg = sprintf(
+                    'Conflicting named parameter "%s": both ":%s" and "%s" are present with different values '
+                    . '(%s vs %s).',
+                    $normalizedKey,
+                    $normalizedKey,
+                    $normalizedKey,
+                    self::formatParamValue($value),
+                    self::formatParamValue($params[$counterpart])
                 );
+                throw new InvalidArgumentException($msg);
             }
             $normalized[$normalizedKey] = $value;
         }
