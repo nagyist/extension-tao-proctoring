@@ -225,6 +225,6 @@ class RdsDeliveryLogServiceTest extends TaoPhpUnitTestRunner
         $sql = 'SELECT * FROM ' . RdsDeliveryLogService::TABLE_NAME .
             ' WHERE ' . RdsDeliveryLogService::DELIVERY_EXECUTION_ID . '=?';
 
-        return $this->persistence->query($sql, [$id])->fetchAll();
+        return $this->persistence->query($sql, [$id])->fetchAllAssociative();
     }
 }

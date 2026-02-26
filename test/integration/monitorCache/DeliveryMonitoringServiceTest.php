@@ -561,7 +561,7 @@ class DeliveryMonitoringServiceTest extends TaoPhpUnitTestRunner
         $sql = 'SELECT * FROM ' . $service::TABLE_NAME .
             ' WHERE ' . $service::COLUMN_DELIVERY_EXECUTION_ID . '=?';
 
-        return $this->persistence->query($sql, [$id])->fetchAll();
+        return $this->persistence->query($sql, [$id])->fetchAllAssociative();
     }
 
     protected function getKvRecordsByParentId($parentId)
@@ -570,7 +570,7 @@ class DeliveryMonitoringServiceTest extends TaoPhpUnitTestRunner
         $sql = 'SELECT * FROM ' . $service::KV_TABLE_NAME .
             ' WHERE ' . $service::KV_COLUMN_PARENT_ID . '=?';
 
-        return $this->persistence->query($sql, [$parentId])->fetchAll(\PDO::FETCH_ASSOC);
+        return $this->persistence->query($sql, [$parentId])->fetchAllAssociative();
     }
 
     protected function getDeliveryExecution($id = null, $state = null)
