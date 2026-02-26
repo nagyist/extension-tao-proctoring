@@ -347,8 +347,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
             'GROUP BY t.' . self::DELIVERY_EXECUTION_ID . ') as count_q';
 
         $stmt = $this->getPersistence()->query($sql, $this->queryParams);
-        $result = $stmt->fetchOne();
-        return (int) $result;
+        return (int) $stmt->fetchOne();
     }
 
     /**
