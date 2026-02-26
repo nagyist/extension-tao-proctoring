@@ -106,7 +106,7 @@ class RdsDeliveryLogService extends ConfigurableService implements DeliveryLog
 
         $queryBuilder->orderBy(static::ID, 'ASC');
 
-        $data = $queryBuilder->execute()->fetchAll(\PDO::FETCH_ASSOC);
+        $data = $queryBuilder->executeQuery()->fetchAllAssociative();
 
         $result = $this->decodeValues($data);
 
@@ -137,7 +137,7 @@ class RdsDeliveryLogService extends ConfigurableService implements DeliveryLog
             ->where(self::DELIVERY_EXECUTION_ID . '=:delivery_execution_id')
             ->setParameter('delivery_execution_id', $request->getDeliveryExecution()->getIdentifier());
 
-        return ($queryBuilder->execute() > 0);
+        return ($queryBuilder->executeStatement() > 0);
     }
 
     /**
@@ -212,7 +212,7 @@ class RdsDeliveryLogService extends ConfigurableService implements DeliveryLog
         }
 
         $shouldDecodeData = isset($options['shouldDecodeData']) ? (bool)$options['shouldDecodeData'] : true;
-        $data             = $queryBuilder->execute()->fetchAll(\PDO::FETCH_ASSOC);
+        $data             = $queryBuilder->executeQuery()->fetchAllAssociative();
         if ($shouldDecodeData) {
             $result = $this->decodeValues($data);
         } else {

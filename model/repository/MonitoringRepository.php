@@ -27,6 +27,7 @@ use common_exception_NotFound;
 use common_persistence_SqlPersistence;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\DBAL\Query\QueryBuilder;
+use Doctrine\DBAL\Result;
 use Exception;
 use oat\generis\model\OntologyAwareTrait;
 use oat\generis\persistence\PersistenceManager;
@@ -37,6 +38,7 @@ use oat\taoDelivery\model\execution\ServiceProxy;
 use oat\taoProctoring\model\execution\DeliveryExecution as ProctoredDeliveryExecution;
 use oat\taoProctoring\model\monitorCache\DeliveryMonitoringData as DeliveryMonitoringDataInterface;
 use oat\taoProctoring\model\monitorCache\DeliveryMonitoringService;
+use oat\taoProctoring\model\helper\SqlParameterBindingTrait;
 use oat\taoProctoring\model\monitorCache\implementation\DeliveryMonitoringData;
 use PDO;
 use PDOException;
@@ -44,6 +46,7 @@ use PDOException;
 class MonitoringRepository extends ConfigurableService implements DeliveryMonitoringService
 {
     use OntologyAwareTrait;
+    use SqlParameterBindingTrait;
 
     public const OPTION_PERSISTENCE = 'persistence';
     public const OPTION_USE_UPDATE_MULTIPLE = 'use_update_multiple';
@@ -149,9 +152,10 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
             $sql = $this->getPersistence()->getPlatForm()->limitStatement($sql, $options['limit'], $options['offset']);
         }
 
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($sql, $this->queryParams);
 
-        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $data = $stmt->fetchAllAssociative();
 
         foreach ($data as &$row) {
             $extraData = [];
@@ -186,10 +190,11 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
 
         $sql = sprintf('select count(*) from %s t %s', self::TABLE_NAME, $whereClause);
 
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($sql, $this->queryParams);
-        $result = $stmt->fetch(PDO::FETCH_BOTH);
+        $result = $stmt->fetchOne();
 
-        return (int) $result[0];
+        return (int) $result;
     }
 
     /**
@@ -289,8 +294,9 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
         $countQueryBuilder = $this->getQueryBuilder();
         $countQueryBuilder->select('count(grouped.delivery_id)');
         $countQueryBuilder->from('(' . $groupedSql . ')', 'grouped');
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($countQueryBuilder->getSQL());
-        return $stmt->fetch(PDO::FETCH_COLUMN);
+        return $stmt->fetchOne();
     }
 
     /**
@@ -376,8 +382,9 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
         }
         $limitQueryBuilder->andWhere('limit_q.delivery_id IS NOT NULL');
         $limitSql = $limitQueryBuilder->getSQL();
+        /** @var Result $stmtLimit */
         $stmtLimit = $this->getPersistence()->query($limitSql, $paramsValues);
-        $dataLimit = $stmtLimit->fetchAll(PDO::FETCH_COLUMN);
+        $dataLimit = $stmtLimit->fetchFirstColumn();
 
 
         $queryBuilder = $this->getQueryBuilder();
@@ -454,8 +461,9 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
 
         $sql = $outerQueryBuilder->getSQL();
 
+        /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($sql, $paramsValues);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAllAssociative();
     }
 
     public function deleteDeliveryExecutionData(DeliveryExecutionDeleteRequest $request): bool
@@ -540,7 +548,7 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
             ->where(self::DELIVERY_EXECUTION_ID . '= :id')
             ->setParameter('id', $deliveryExecutionId);
 
-        $data = $qb->execute()->fetch(PDO::FETCH_ASSOC);
+        $data = $qb->executeQuery()->fetchAssociative();
 
         if ($data === false) {
             $data = [];
@@ -666,6 +674,7 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
             self::COLUMN_DELIVERY_EXECUTION_ID
         );
 
+        $params = $this->bindMissingNamedParameters($sql, $params);
         return $this->getPersistence()->exec($sql, $params);
     }
 

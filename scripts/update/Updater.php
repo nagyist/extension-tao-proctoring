@@ -442,7 +442,7 @@ class Updater extends common_ext_ExtensionUpdater
                 ->set('monitoring_value', "REPLACE(monitoring_value, 's', '')")
                 ->where('monitoring_key = ? and monitoring_value is not null')
                 ->setParameters(['remaining_time'])
-                ->execute();
+                ->executeStatement();
 
             $this->setVersion('5.12.0');
         }
