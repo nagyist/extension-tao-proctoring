@@ -42,7 +42,8 @@ trait SqlParameterBindingTrait
      */
     protected function bindMissingNamedParameters(string $sql, array $params, bool $fillMissingWithNull = false): array
     {
-        if (preg_match_all('/:(\w+)/', $sql, $matches)) {
+        // (?<!:) avoids matching :: as a named parameter (e.g. PostgreSQL ::jsonb cast)
+        if (preg_match_all('/(?<!:):(\w+)/', $sql, $matches)) {
             $missing = [];
             foreach (array_unique($matches[1]) as $name) {
                 $keyWithColon = ':' . $name;
