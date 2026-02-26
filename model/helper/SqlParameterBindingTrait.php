@@ -42,7 +42,8 @@ trait SqlParameterBindingTrait
      */
     protected function bindMissingNamedParameters(string $sql, array $params, bool $fillMissingWithNull = false): array
     {
-        // (?<!:) avoids matching :: as a named parameter (e.g. PostgreSQL ::jsonb cast)
+        // Matches named placeholders :name (not :: cast). Note: does not skip quoted strings or
+        // SQL comments—e.g. ':x' inside a string literal would still be treated as a placeholder.
         if (preg_match_all('/(?<!:):(\w+)/', $sql, $matches)) {
             $missing = [];
             foreach (array_unique($matches[1]) as $name) {
