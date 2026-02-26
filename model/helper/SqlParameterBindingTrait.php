@@ -66,8 +66,32 @@ trait SqlParameterBindingTrait
         $normalized = [];
         foreach ($params as $key => $value) {
             $keyStr = (string) $key;
-            $normalized[strpos($keyStr, ':') === 0 ? substr($keyStr, 1) : $key] = $value;
+            $hasLeadingColon = strpos($keyStr, ':') === 0;
+            $normalizedKey = $hasLeadingColon ? substr($keyStr, 1) : $key;
+            $counterpart = $hasLeadingColon ? $normalizedKey : ':' . $keyStr;
+            if (array_key_exists($counterpart, $params) && $params[$counterpart] !== $value) {
+                throw new InvalidArgumentException(
+                    sprintf(
+                        'Conflicting named parameter "%s": both ":%s" and "%s" are present with different values (%s vs %s).',
+                        $normalizedKey,
+                        $normalizedKey,
+                        $normalizedKey,
+                        self::formatParamValue($value),
+                        self::formatParamValue($params[$counterpart])
+                    )
+                );
+            }
+            $normalized[$normalizedKey] = $value;
         }
         return $normalized;
+    }
+
+    private static function formatParamValue(mixed $value): string
+    {
+        if (is_scalar($value) || $value === null) {
+            $s = (string) json_encode($value);
+            return strlen($s) > 100 ? substr($s, 0, 100) . '...' : $s;
+        }
+        return is_object($value) ? get_class($value) : gettype($value);
     }
 }

@@ -158,6 +158,24 @@ class SqlParameterBindingTraitTest extends TestCase
         $result = $this->bind($sql, $params, false);
         $this->assertSame([], $result);
     }
+
+    public function testSameValueForColonAndPlainKeyDoesNotThrow(): void
+    {
+        $sql = 'SELECT * FROM t WHERE id = :id';
+        $params = ['id' => 1, ':id' => 1];
+        $result = $this->bind($sql, $params, false);
+        $this->assertSame(['id' => 1], $result);
+    }
+
+    public function testConflictingColonAndPlainKeyThrowsWithParameterNameAndValues(): void
+    {
+        $sql = 'SELECT * FROM t WHERE id = :id';
+        $params = ['id' => 1, ':id' => 2];
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Conflicting named parameter "id"');
+        $this->expectExceptionMessage('different values');
+        $this->bind($sql, $params, false);
+    }
 }
 
 /** Test double that uses the trait so the real parameter-checking flow is exercised. */
