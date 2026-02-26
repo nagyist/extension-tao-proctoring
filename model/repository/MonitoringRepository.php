@@ -29,7 +29,6 @@ use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Result;
 use Exception;
-use InvalidArgumentException;
 use oat\generis\model\OntologyAwareTrait;
 use oat\generis\persistence\PersistenceManager;
 use oat\oatbox\service\ConfigurableService;
@@ -39,6 +38,7 @@ use oat\taoDelivery\model\execution\ServiceProxy;
 use oat\taoProctoring\model\execution\DeliveryExecution as ProctoredDeliveryExecution;
 use oat\taoProctoring\model\monitorCache\DeliveryMonitoringData as DeliveryMonitoringDataInterface;
 use oat\taoProctoring\model\monitorCache\DeliveryMonitoringService;
+use oat\taoProctoring\model\helper\SqlParameterBindingTrait;
 use oat\taoProctoring\model\monitorCache\implementation\DeliveryMonitoringData;
 use PDO;
 use PDOException;
@@ -46,6 +46,7 @@ use PDOException;
 class MonitoringRepository extends ConfigurableService implements DeliveryMonitoringService
 {
     use OntologyAwareTrait;
+    use SqlParameterBindingTrait;
 
     public const OPTION_PERSISTENCE = 'persistence';
     public const OPTION_USE_UPDATE_MULTIPLE = 'use_update_multiple';
@@ -675,38 +676,6 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
 
         $params = $this->bindMissingNamedParameters($sql, $params);
         return $this->getPersistence()->exec($sql, $params);
-    }
-
-    /**
-     * Ensure every named parameter in the SQL has a bound value and keys match
-     * DBAL expectation (name without colon). Avoids "Named parameter X does not have a bound value".
-     *
-     * @param string $sql
-     * @param array $params
-     * @return array<string, mixed>
-     */
-    private function bindMissingNamedParameters(string $sql, array $params): array
-    {
-        if (preg_match_all('/:(\w+)/', $sql, $matches)) {
-            $missing = [];
-            foreach (array_unique($matches[1]) as $name) {
-                $keyWithColon = ':' . $name;
-                if (!array_key_exists($keyWithColon, $params) && !array_key_exists($name, $params)) {
-                    $missing[] = $name;
-                }
-            }
-            if ($missing !== []) {
-                $snippet = strlen($sql) > 200 ? substr($sql, 0, 200) . '...' : $sql;
-                throw new InvalidArgumentException(
-                    'Missing named parameter(s) for SQL: ' . implode(', ', $missing) . '. SQL snippet: ' . $snippet
-                );
-            }
-        }
-        $normalized = [];
-        foreach ($params as $key => $value) {
-            $normalized[strpos((string) $key, ':') === 0 ? substr((string) $key, 1) : $key] = $value;
-        }
-        return $normalized;
     }
 
     /**

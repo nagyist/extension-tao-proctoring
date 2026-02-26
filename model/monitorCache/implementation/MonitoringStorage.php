@@ -34,6 +34,7 @@ use oat\taoProctoring\model\monitorCache\DeliveryMonitoringData as DeliveryMonit
 use oat\oatbox\service\ConfigurableService;
 use oat\generis\model\OntologyAwareTrait;
 use oat\taoProctoring\model\execution\DeliveryExecution as ProctoredDeliveryExecution;
+use oat\taoProctoring\model\helper\SqlParameterBindingTrait;
 
 /**
  * Class DeliveryMonitoringService
@@ -78,6 +79,7 @@ use oat\taoProctoring\model\execution\DeliveryExecution as ProctoredDeliveryExec
 class MonitoringStorage extends ConfigurableService implements DeliveryMonitoringService
 {
     use OntologyAwareTrait;
+    use SqlParameterBindingTrait;
 
     public const OPTION_PERSISTENCE = 'persistence';
 
@@ -447,7 +449,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         $sql = "UPDATE " . self::TABLE_NAME . " SET $setClause
         WHERE " . self::COLUMN_DELIVERY_EXECUTION_ID . '=:delivery_execution_id';
 
-        $params = $this->bindMissingNamedParameters($sql, $params);
+        $params = $this->bindMissingNamedParameters($sql, $params, true);
         $rowsUpdated = $this->getPersistence()->exec($sql, $params);
 
         return $rowsUpdated;
@@ -663,31 +665,6 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         return $this->getServiceLocator()
             ->get(PersistenceManager::SERVICE_ID)
             ->getPersistenceById($this->getOption(self::OPTION_PERSISTENCE));
-    }
-
-    /**
-     * Ensure every named parameter in the SQL has a bound value and keys match
-     * DBAL expectation (name without colon). Avoids "Named parameter X does not have a bound value".
-     *
-     * @param string $sql
-     * @param array $params
-     * @return array
-     */
-    protected function bindMissingNamedParameters($sql, array $params)
-    {
-        if (preg_match_all('/:(\w+)/', $sql, $matches)) {
-            foreach (array_unique($matches[1]) as $name) {
-                $keyWithColon = ':' . $name;
-                if (!array_key_exists($keyWithColon, $params) && !array_key_exists($name, $params)) {
-                    $params[$name] = null;
-                }
-            }
-        }
-        $normalized = [];
-        foreach ($params as $key => $value) {
-            $normalized[strpos($key, ':') === 0 ? substr($key, 1) : $key] = $value;
-        }
-        return $normalized;
     }
 
     /**
