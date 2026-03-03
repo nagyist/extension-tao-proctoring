@@ -967,6 +967,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
         }
         $limitQueryBuilder->andWhere('limit_q.delivery_id IS NOT NULL');
         $limitSql = $limitQueryBuilder->getSQL();
+        $paramsValues = $this->bindMissingNamedParameters($limitSql, $paramsValues, true);
         $stmtLimit = $this->getPersistence()->query($limitSql, $paramsValues);
         $dataLimit = $stmtLimit->fetchFirstColumn();
 
@@ -1045,6 +1046,7 @@ class MonitoringStorage extends ConfigurableService implements DeliveryMonitorin
 
         $sql = $outerQueryBuilder->getSQL();
 
+        $paramsValues = $this->bindMissingNamedParameters($sql, $paramsValues, true);
         $stmt = $this->getPersistence()->query($sql, $paramsValues);
         $data = $stmt->fetchAllAssociative();
 
