@@ -382,6 +382,7 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
         }
         $limitQueryBuilder->andWhere('limit_q.delivery_id IS NOT NULL');
         $limitSql = $limitQueryBuilder->getSQL();
+        $paramsValues = $this->bindMissingNamedParameters($limitSql, $paramsValues, true);
         /** @var Result $stmtLimit */
         $stmtLimit = $this->getPersistence()->query($limitSql, $paramsValues);
         $dataLimit = $stmtLimit->fetchFirstColumn();
@@ -461,6 +462,7 @@ class MonitoringRepository extends ConfigurableService implements DeliveryMonito
 
         $sql = $outerQueryBuilder->getSQL();
 
+        $paramsValues = $this->bindMissingNamedParameters($sql, $paramsValues, true);
         /** @var Result $stmt */
         $stmt = $this->getPersistence()->query($sql, $paramsValues);
         return $stmt->fetchAllAssociative();
