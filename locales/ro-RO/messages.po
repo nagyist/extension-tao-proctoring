@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tao-open-source\n"
-"PO-Revision-Date: 2025-12-05 08:36\n"
+"PO-Revision-Date: 2026-03-24 16:05\n"
 "Last-Translator: TAO Translation Team <translation@tao.lu>\n"
 "MIME-Version: 1.0\n"
 "Language: ro\n"
@@ -21,1105 +21,1105 @@ msgstr ""
 "Language-Team: Romanian\n"
 
 msgid " sec"
-msgstr ""
+msgstr " sec"
 
 msgid "%1$s - Item %2$s/%3$s"
-msgstr ""
+msgstr "%1$s - Articolul %2$s/%3$s"
 
 msgid "%d sessions of the delivery %s have not been paused"
-msgstr ""
+msgstr "%d sesiuni de livrare %s nu au fost întrerupte"
 
 msgid "%s - item %p/%c"
-msgstr ""
+msgstr "%s - obiect %p/%c"
 
 msgid "%s completed"
-msgstr ""
+msgstr "%s finalizat"
 
 msgid "%s could not be %s because it is finished. Please refresh your data."
-msgstr ""
+msgstr "%s nu a putut fi %s deoarece este terminat. Vă rugăm să reîmprospătați datele."
 
 msgid "%s could not be %s because it is terminated. Please refresh your data."
-msgstr ""
+msgstr "%s nu a putut fi %s deoarece este terminat. Vă rugăm să reîmprospătați datele."
 
 msgid "%s could not be %s."
-msgstr ""
+msgstr "%s nu a putut fi %s."
 
 msgid "%s executions migrated"
-msgstr ""
+msgstr "%s execuții migrate"
 
 msgid "%s KV entries removed"
 msgstr ""
 
 msgid "%s minutes more"
-msgstr ""
+msgstr "%s minute mai mult"
 
 msgid "%s\\'s test had already been authorized."
-msgstr ""
+msgstr "Testul %s\\s a fost deja autorizat."
 
 msgid "%s\\'s test had already been paused."
-msgstr ""
+msgstr "Testul %s\\'s a fost deja întrerupt."
 
 msgid "%s\\'s test had already been terminated."
-msgstr ""
+msgstr "Testul %sa fost deja terminat."
 
 msgid "%s\\'s test had been canceled."
-msgstr ""
+msgstr "Testul %sa fost anulat."
 
 msgid "%s\\'s test had been completed."
-msgstr ""
+msgstr "Testul %sa fost finalizat."
 
 msgid "%s\\'s test had been paused."
-msgstr ""
+msgstr "Testul %sa fost întrerupt."
 
 msgid "%s\\'s test had been terminated."
-msgstr ""
+msgstr "Testul %sa fost terminat."
 
 msgid "%s\\'s test had not been finished."
-msgstr ""
+msgstr "Testul %snu a fost terminat."
 
 msgid "%s\\'s test had not been in progress."
-msgstr ""
+msgstr "Testul %snu a fost în desfășurare."
 
 msgid "%s\\'s test had not been started."
-msgstr ""
+msgstr "Testul %snu a fost pornit."
 
 msgid "%s\\'s test must be terminated."
-msgstr ""
+msgstr "Testul %strebuie terminat."
 
 msgid "..."
-msgstr ""
+msgstr "..."
 
 msgid "A session of the delivery %s have not been paused"
-msgstr ""
+msgstr "O sesiune de livrare %s nu a fost întreruptă"
 
 msgid "Action"
-msgstr ""
+msgstr "Acțiune"
 
 msgid "Actions"
-msgstr ""
+msgstr "Acțiuni"
 
 msgid "Active"
-msgstr ""
+msgstr "Activ"
 
 msgid "Active proctors"
-msgstr ""
+msgstr "Proproctori activi"
 
 msgid "Active test-takers"
-msgstr ""
+msgstr "Test-takeri activi"
 
 msgid "Actor"
-msgstr ""
+msgstr "Actor"
 
 msgid "Add test takers"
-msgstr ""
+msgstr "Adaugă ciorapi de test"
 
 msgid "Adjusted"
-msgstr ""
+msgstr "Ajustat"
 
 msgid "Administer deliveries"
-msgstr ""
+msgstr "Se administrează livrările"
 
 msgid "Administration"
-msgstr ""
+msgstr "Administrare"
 
 msgid "All fields are required"
-msgstr ""
+msgstr "Toate câmpurile sunt obligatorii"
 
 msgid "already authorized"
-msgstr ""
+msgstr "deja autorizat"
 
 msgid "Already changed time will be added or subtracted by the new value."
-msgstr ""
+msgstr "Timpul deja modificat va fi adăugat sau scăzut de noua valoare."
 
 msgid "already paused"
-msgstr ""
+msgstr "deja întrerupt"
 
 msgid "already terminated"
-msgstr ""
+msgstr "deja terminată"
 
 msgid "Apply default tag"
-msgstr ""
+msgstr "Aplică eticheta implicită"
 
 msgid "Are you sure you want to end the test?"
-msgstr ""
+msgstr "Ești sigur că vrei să închizi testul?"
 
 #, tao-public
 msgid "Assessment Activity"
-msgstr ""
+msgstr "Activitatea de evaluare"
 
 msgid "Assessment has been paused due to attempt to switch to another window/tab."
-msgstr ""
+msgstr "Evaluarea a fost întreruptă din cauza încercării de a comuta la o altă fereastră/filă."
 
 msgid "Assign administrator"
-msgstr ""
+msgstr "Atribuie administrator"
 
 msgid "Assign more test takers to this session"
-msgstr ""
+msgstr "Atribuie mai multe teste la această sesiune"
 
 msgid "Assign proctors"
-msgstr ""
+msgstr "Atribuiți proctori"
 
 msgid "Assign the selected test takers"
-msgstr ""
+msgstr "Atribuiți butatoarele de testare selectate"
 
 msgid "Assign the selected test takers to the session"
-msgstr ""
+msgstr "Atribuiți butatoarele de testare selectate la sesiune"
 
 msgid "Assign the test taker to the session"
-msgstr ""
+msgstr "Atribuiți atacatorul de test la sesiune"
 
 msgid "Assigned proctors"
-msgstr ""
+msgstr "Proctoare alocate"
 
 msgid "Assigned test takers"
-msgstr ""
+msgstr "Recipiente de test atribuite"
 
 msgid "Attempts"
-msgstr ""
+msgstr "Încercări"
 
 msgid "author"
-msgstr ""
+msgstr "autor"
 
 msgid "Authorization status"
-msgstr ""
+msgstr "Status autorizare"
 
 msgid "Authorize"
-msgstr ""
+msgstr "Autorizează"
 
 msgid "Authorize session"
-msgstr ""
+msgstr "Autorizează sesiunea"
 
 msgid "Authorize Session"
-msgstr ""
+msgstr "Autorizare sesiune"
 
 msgid "Authorize sessions"
-msgstr ""
+msgstr "Autorizează sesiunile"
 
 msgid "Authorize the proctor"
-msgstr ""
+msgstr "Autorizează proctorul"
 
 msgid "Authorize the selected proctors"
-msgstr ""
+msgstr "Autorizează proctoarele selectate"
 
 msgid "Authorized"
-msgstr ""
+msgstr "Autorizat"
 
 msgid "authorized"
-msgstr ""
+msgstr "autorizat"
 
 msgid "Authorized but not started"
-msgstr ""
+msgstr "Autorizat, dar nepornit"
 
 msgid "authorized but not started"
-msgstr ""
+msgstr "autorizat, dar nepornit"
 
 msgid "Authorized proctors"
-msgstr ""
+msgstr "Proctori autorizați"
 
 msgid "Authorized, you may proceed"
-msgstr ""
+msgstr "Autorizat, puteţi continua"
 
 msgid "Automatically paused by the system due to authorized test not being launched by test taker."
-msgstr ""
+msgstr "Pauză automat de sistem datorită faptului că testul autorizat nu este lansat de către atacatorul de test."
 
 msgid "Automatically reset by the system due to authorization request being cancelled by test taker."
-msgstr ""
+msgstr "Resetează automat de sistem din cauza anulării cererii de autorizare de către persoana care efectuează testul."
 
 msgid "Automatically reset by the system due to authorized test not being launched by test taker."
-msgstr ""
+msgstr "Resetează automat de sistem datorită faptului că testul autorizat nu este lansat de către evaluatorul de teste."
 
 msgid "Automatically reset by the system due to the test taker choosing not to proceed with the authorized test."
-msgstr ""
+msgstr "Resetează automat de sistem din cauza alegerii persoanei care efectuează testul, pentru a nu continua cu testul autorizat."
 
 msgid "Available"
-msgstr ""
+msgstr "Disponibil"
 
 msgid "Available history"
-msgstr ""
+msgstr "Istoric disponibil"
 
 msgid "Available test takers"
-msgstr ""
+msgstr "Testare disponibile"
 
 msgid "awaiting"
-msgstr ""
+msgstr "în aşteptare"
 
 msgid "Awaiting"
-msgstr ""
+msgstr "Asteapta"
 
 msgid "Back"
-msgstr ""
+msgstr "Înapoi"
 
 msgid "Back to sessions"
-msgstr ""
+msgstr "Înapoi la sesiuni"
 
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportament"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Anulează"
 
 msgid "cancel"
-msgstr ""
+msgstr "anulează"
 
 msgid "cancel the action"
-msgstr ""
+msgstr "anulează acțiunea"
 
 msgid "canceled"
-msgstr ""
+msgstr "anulat"
 
 msgid "Canceled"
-msgstr ""
+msgstr "Anulat"
 
 msgid "Cannot authorize test session."
-msgstr ""
+msgstr "Nu se poate autoriza sesiunea de testare."
 
 msgid "Cannot authorize test sessions."
-msgstr ""
+msgstr "Imposibil de autorizat sesiunile de testare."
 
 msgid "Cannot execute action."
-msgstr ""
+msgstr "Nu se poate executa acțiunea."
 
 msgid "Cannot extend test session."
-msgstr ""
+msgstr "Nu se poate prelungi sesiunea de testare."
 
 msgid "Cannot extend test sessions."
-msgstr ""
+msgstr "Nu se pot extinde sesiunile de testare."
 
 msgid "Cannot pause test session."
-msgstr ""
+msgstr "Nu se poate întrerupe sesiunea de testare."
 
 msgid "Cannot pause test sessions."
-msgstr ""
+msgstr "Nu se pot întrerupe sesiunile de test."
 
 msgid "Cannot print test session."
-msgstr ""
+msgstr "Nu se poate tipări sesiunea de testare."
 
 msgid "Cannot print test sessions."
-msgstr ""
+msgstr "Nu se pot tipări sesiuni."
 
 msgid "Cannot reactivate test session."
-msgstr ""
+msgstr "Nu se poate reactiva sesiunea de teste."
 
 msgid "Cannot reactivate test sessions."
-msgstr ""
+msgstr "Nu se pot reactiva sesiunile de test."
 
 msgid "Cannot report test session."
-msgstr ""
+msgstr "Nu poate raporta sesiunea de testare."
 
 msgid "Cannot report test sessions."
-msgstr ""
+msgstr "Nu se pot raporta sesiunile de testare."
 
 msgid "Cannot terminate test session."
-msgstr ""
+msgstr "Nu se poate încheia sesiunea de testare."
 
 msgid "Cannot terminate test sessions."
-msgstr ""
+msgstr "Nu se pot termina sesiunile de testare."
 
 msgid "category"
-msgstr ""
+msgstr "categorie"
 
 msgid "Change time"
-msgstr ""
+msgstr "Schimbă ora"
 
 msgid "Changed Time"
-msgstr ""
+msgstr "Timp schimbat"
 
 msgid "Column %s successfully created"
-msgstr ""
+msgstr "Coloana %s a fost creată"
 
 msgid "Comfort"
-msgstr ""
+msgstr "Confort"
 
 msgid "comment"
-msgstr ""
+msgstr "comentariu"
 
 msgid "comment..."
-msgstr ""
+msgstr "comentariu..."
 
 msgid "Complaint"
-msgstr ""
+msgstr "Plângere"
 
 msgid "Completed"
-msgstr ""
+msgstr "Completat"
 
 msgid "completed"
-msgstr ""
+msgstr "finalizată"
 
 msgid "Completed tests"
-msgstr ""
+msgstr "Teste finalizate"
 
 msgid "Compliance"
-msgstr ""
+msgstr "Conformitate"
 
 msgid "Connectivity"
-msgstr ""
+msgstr "Conectivitate"
 
 msgid "Context"
-msgstr ""
+msgstr "Context"
 
 msgid "Create and authorize a proctor to the selected test sites"
-msgstr ""
+msgstr "Creează și autorizează un proctor la site-urile de testare selectate"
 
 msgid "Create Proctor"
-msgstr ""
+msgstr "Creează Proctor"
 
 msgid "Creates and authorizes proctor"
-msgstr ""
+msgstr "Creează și autorizează proctorul"
 
 msgid "Current Assessment Activity"
-msgstr ""
+msgstr "Activitatea curentă de evaluare"
 
 msgid "Current sessions"
-msgstr ""
+msgstr "Sesiuni curente"
 
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 msgid "date"
-msgstr ""
+msgstr "dată"
 
 msgid "Days"
-msgstr ""
+msgstr "Zile"
 
 msgid "Decryption failed because of using the wrong customer app key."
-msgstr ""
+msgstr "Decriptarea a eșuat din cauza utilizării cheii de client greșite."
 
 msgid "Define sub-centers"
-msgstr ""
+msgstr "Definire sub-centre"
 
 msgid "Deliveries"
-msgstr ""
+msgstr "Livrări"
 
 msgid "Delivery"
-msgstr ""
+msgstr "Livrare"
 
 msgid "Detailed Session History of %s"
-msgstr ""
+msgstr "Istoricul detaliat al sesiunii %s"
 
 msgid "Detailed Session History of a selection"
-msgstr ""
+msgstr "Istoricul detaliat al unei selecții"
 
 msgid "Details"
-msgstr ""
+msgstr "Detalii"
 
 msgid "Disturbance"
-msgstr ""
+msgstr "Tulburări"
 
 msgid "Duration"
-msgstr ""
+msgstr "Durată"
 
 msgid "Edit test center"
-msgstr ""
+msgstr "Editați centrul de testare"
 
 msgid "Elapsed time"
-msgstr ""
+msgstr "Timp scurs"
 
 msgid "End"
-msgstr ""
+msgstr "Sfârșit"
 
 msgid "End date of the export"
-msgstr ""
+msgstr "Data de încheiere a exportului"
 
 msgid "Entered value is not correct"
-msgstr ""
+msgstr "Valoarea introdusă nu este corectă"
 
 msgid "Environment"
-msgstr ""
+msgstr "Mediul"
 
 msgid "Error"
-msgstr ""
+msgstr "Eroare"
 
 msgid "Event"
-msgstr ""
+msgstr "Eveniment"
 
 msgid "Examinee"
-msgstr ""
+msgstr "Examină"
 
 msgid "Export"
-msgstr ""
+msgstr "Exportă"
 
 #, tao-public
 msgid "Export Irregularities"
-msgstr ""
+msgstr "Exporturi neregulate"
 
 msgid "Extended time"
-msgstr ""
+msgstr "Timp extins"
 
 msgid "Extra"
-msgstr ""
+msgstr "Extra"
 
 msgid "Extra Time"
-msgstr ""
+msgstr "Timp suplimentar"
 
 msgid "Extra time"
-msgstr ""
+msgstr "Mai mult timp"
 
 msgid "Extra time granted"
-msgstr ""
+msgstr "Timp suplimentar acordat"
 
 msgid "Filter"
-msgstr ""
+msgstr "Filtrare"
 
 msgid "Filter by the selected dates"
-msgstr ""
+msgstr "Filtrează după datele selectate"
 
 msgid "Finished"
-msgstr ""
+msgstr "Terminat"
 
 msgid "finished"
-msgstr ""
+msgstr "terminat"
 
 msgid "First name"
-msgstr ""
+msgstr "Prenume"
 
 msgid "Freezing"
-msgstr ""
+msgstr "Înghețare"
 
 msgid "Grant Extra Time"
-msgstr ""
+msgstr "Acordă o perioadă suplimentară"
 
 msgid "Groups: %s. %s"
-msgstr ""
+msgstr "Grupuri: %s. %s"
 
 msgid "Hours"
-msgstr ""
+msgstr "Ore"
 
 msgid "However, the action will not be applied to the following sessions"
-msgstr ""
+msgstr "Cu toate acestea, acțiunea nu se va aplica următoarelor sesiuni"
 
 msgid "ID/Authorization"
-msgstr ""
+msgstr "ID/Autorizare"
 
 msgid "Identifier"
-msgstr ""
+msgstr "Identifier"
 
 msgid "Illness"
-msgstr ""
+msgstr "Boli"
 
 msgid "In Progress"
-msgstr ""
+msgstr "În curs"
 
 msgid "in progress"
-msgstr ""
+msgstr "în curs"
 
 msgid "INPROGRESS"
-msgstr ""
+msgstr "INPROGRESE"
 
 msgid "Irregularities for \"%s\" successfully exported"
-msgstr ""
+msgstr "Neregularităţi pentru \"%s\" exportate cu succes"
 
 msgid "Issue Category"
-msgstr ""
+msgstr "Categorie de probleme"
 
 msgid "item"
-msgstr ""
+msgstr "articol"
 
 msgid "Item Variables"
-msgstr ""
+msgstr "Variabile Element"
 
 msgid "Label"
-msgstr ""
+msgstr "Etichetă"
 
 msgid "Last Day"
-msgstr ""
+msgstr "Ultima zi"
 
 msgid "Last launch"
-msgstr ""
+msgstr "Ultima lansare"
 
 msgid "Last Month"
-msgstr ""
+msgstr "Ultima lună"
 
 msgid "Last name"
-msgstr ""
+msgstr "Nume de familie"
 
 msgid "Last Week"
-msgstr ""
+msgstr "Săptămâna trecută"
 
 msgid "Late"
-msgstr ""
+msgstr "Târzie"
 
 msgid "Launching"
-msgstr ""
+msgstr "Lansare"
 
 msgid "Loading"
-msgstr ""
+msgstr "Încărcare"
 
 msgid "Logout"
-msgstr ""
+msgstr "Deconectare"
 
 msgid "Main Menu"
-msgstr ""
+msgstr "Meniul principal"
 
 msgid "Manage Proctors"
-msgstr ""
+msgstr "Gestionează Proctoare"
 
 #, tao-public
 msgid "Manage Results"
-msgstr ""
+msgstr "Gestionare rezultate"
 
 msgid "minutes"
-msgstr ""
+msgstr "minute"
 
 msgid "Monitor"
-msgstr ""
+msgstr "Monitorizare"
 
 msgid "Monitoring"
-msgstr ""
+msgstr "Monitorizare"
 
 msgid "Navigation"
-msgstr ""
+msgstr "Navigaţie"
 
 msgid "Network"
-msgstr ""
+msgstr "Rețea"
 
 msgid "No assigned proctors"
-msgstr ""
+msgstr "Nici un proctor atribuit"
 
 msgid "No assigned test takers"
-msgstr ""
+msgstr "Niciun obiect de test desemnat"
 
 msgid "No available test takers to assign"
-msgstr ""
+msgstr "Nici un test disponibil pentru a atribui"
 
 msgid "No history to display!"
-msgstr ""
+msgstr "Niciun istoric de afișat!"
 
 msgid "No proctors in request param"
-msgstr ""
+msgstr "Niciun proctor în solicitarea param-ului"
 
 msgid "No sessions"
-msgstr ""
+msgstr "Nici o sesiune"
 
 msgid "No sessions available"
-msgstr ""
+msgstr "Nu sunt sesiuni disponibile"
 
 msgid "No Show"
-msgstr ""
+msgstr "Nici un spectacol"
 
 msgid "Noise"
-msgstr ""
+msgstr "Zgomot"
 
 msgid "not finished"
-msgstr ""
+msgstr "nu s-a terminat"
 
 msgid "not in progress"
-msgstr ""
+msgstr "nu este în desfășurare"
 
 msgid "not started"
-msgstr ""
+msgstr "nu a început"
 
 msgid "not terminated"
-msgstr ""
+msgstr "nu s-a terminat"
 
 msgid "Note"
-msgstr ""
+msgstr "Notă"
 
 msgid "offline"
-msgstr ""
+msgstr "deconectat"
 
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 msgid "online"
-msgstr ""
+msgstr "online"
 
 msgid "Other"
-msgstr ""
+msgstr "Altele"
 
 msgid "Outcome"
-msgstr ""
+msgstr "Rezultat"
 
 msgid "Partially authorized proctors"
-msgstr ""
+msgstr "Proctori autorizați parțial"
 
 msgid "Pause"
-msgstr ""
+msgstr "Întrerupeți"
 
 msgid "Pause Active Test Sessions"
-msgstr ""
+msgstr "Întrerupeți sesiunile de testare active"
 
 msgid "Pause due to server maintenance"
-msgstr ""
+msgstr "Pauză din cauza întreținerii serverului"
 
 msgid "Pause session"
-msgstr ""
+msgstr "Întrerupeți sesiunea"
 
 msgid "Pause Session"
-msgstr ""
+msgstr "Pauză sesiune"
 
 msgid "Pause sessions"
-msgstr ""
+msgstr "Pauză sesiuni"
 
 msgid "paused"
-msgstr ""
+msgstr "întrerupt"
 
 msgid "Paused"
-msgstr ""
+msgstr "Pauză"
 
 msgid "Please provide a reason"
-msgstr ""
+msgstr "Vă rugăm să furnizați un motiv"
 
 msgid "Please select one or more test site to manage proctors"
-msgstr ""
+msgstr "Vă rugăm să selectaţi unul sau mai multe site-uri de testare pentru a gestiona proctorii"
 
 msgid "Please wait, authorization in process ..."
-msgstr ""
+msgstr "Vă rugăm așteptați, autorizați în proces..."
 
 msgid "Please, make your selection"
-msgstr ""
+msgstr "Vă rugăm, faceți selecția"
 
 msgid "Power Outage"
-msgstr ""
+msgstr "Ieșire putere"
 
 msgid "Previous Month"
-msgstr ""
+msgstr "Luna precedentă"
 
 msgid "Print Results"
-msgstr ""
+msgstr "Printare rezultate"
 
 msgid "Print Score"
-msgstr ""
+msgstr "Printare Scor"
 
 msgid "Print the assessment results"
-msgstr ""
+msgstr "Imprimați rezultatele evaluării"
 
 msgid "Printing"
-msgstr ""
+msgstr "Tipărire"
 
 msgid "Proceed"
-msgstr ""
+msgstr "Continuă"
 
 msgid "Proctor"
-msgstr ""
+msgstr "Proctor"
 
 msgid "Proctor authorization"
-msgstr ""
+msgstr "Proctor autorizare"
 
 msgid "Proctor created"
-msgstr ""
+msgstr "Proctor creat"
 
 msgid "Proctor/Staff"
-msgstr ""
+msgstr "Proctor/Personal"
 
 msgid "Proctored Delivery Server"
-msgstr ""
+msgstr "Server de livrare Proctored"
 
 msgid "Proctored Test-Takers"
-msgstr ""
+msgstr "Proctored Test-Takers"
 
 msgid "Proctoring interface"
-msgstr ""
+msgstr "Interfață proctoring"
 
 msgid "Proctors"
-msgstr ""
+msgstr "Proctoare"
 
 msgid "Proctors authorized"
-msgstr ""
+msgstr "Proctoare autorizate"
 
 msgid "Proctors revoked"
-msgstr ""
+msgstr "Proctoare revocate"
 
 msgid "Progress"
-msgstr ""
+msgstr "Progresul"
 
 msgid "Reactivate Session"
-msgstr ""
+msgstr "Reactivare sesiune"
 
 msgid "Reactivate session"
-msgstr ""
+msgstr "Reactivare sesiune"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Împrospătează"
 
 msgid "Refresh the page"
-msgstr ""
+msgstr "Reîmprospătează pagina"
 
 msgid "Registered proctoring log"
-msgstr ""
+msgstr "Jurnal proctoring înregistrat"
 
 msgid "Remaining"
-msgstr ""
+msgstr "Rămas"
 
 msgid "Remove"
-msgstr ""
+msgstr "Elimină"
 
 msgid "Remove default tag filtering"
-msgstr ""
+msgstr "Elimină filtrarea implicită a etichetelor"
 
 msgid "Remove the selected test takers from the session"
-msgstr ""
+msgstr "Elimină testările selectate din sesiune"
 
 msgid "Remove the test taker from the session"
-msgstr ""
+msgstr "Eliminați dispozitivul de testare din sesiune"
 
 msgid "Report"
-msgstr ""
+msgstr "Raport"
 
 msgid "Report irregularities"
-msgstr ""
+msgstr "Raportează neregulile"
 
 msgid "Report Irregularity"
-msgstr ""
+msgstr "Raportează neregularitatea"
 
 msgid "Report irregularity"
-msgstr ""
+msgstr "Raportează neregularitatea"
 
 msgid "reported for irregularity"
-msgstr ""
+msgstr "raportate ca urmare a neregulii"
 
 msgid "Resource update task is completed"
-msgstr ""
+msgstr "Sarcina de actualizare a resurselor este finalizată"
 
 msgid "results"
-msgstr ""
+msgstr "rezultate"
 
 #, tao-public
 msgid "Results"
-msgstr ""
+msgstr "Rezultate"
 
 msgid "Return to the session manager"
-msgstr ""
+msgstr "Reveniți la managerul de sesiuni"
 
 msgid "Return to the session monitoring"
-msgstr ""
+msgstr "Revenire la monitorizarea sesiunii"
 
 msgid "Revoke authorization for the selected proctor"
-msgstr ""
+msgstr "Revocați autorizația pentru proctorul selectat"
 
 msgid "Revoke the proctor"
-msgstr ""
+msgstr "Revocați proctorul"
 
 msgid "Role"
-msgstr ""
+msgstr "Rol"
 
 msgid "Score"
-msgstr ""
+msgstr "Scor"
 
 msgid "Score Report"
-msgstr ""
+msgstr "Scor Raport"
 
 msgid "section"
-msgstr ""
+msgstr "secțiune"
 
 msgid "Session"
-msgstr ""
+msgstr "Sesiune"
 
 msgid "session"
-msgstr ""
+msgstr "sesiune"
 
 msgid "Session %s - %s has not been processed"
-msgstr ""
+msgstr "Sesiunea %s - %s nu a fost procesată"
 
 msgid "Session history"
-msgstr ""
+msgstr "Istoric sesiune"
 
 msgid "Session time handling"
-msgstr ""
+msgstr "Manipularea timpului sesiunii"
 
 msgid "Sessions"
-msgstr ""
+msgstr "Sesiuni"
 
 msgid "sessions"
-msgstr ""
+msgstr "sesiuni"
 
 msgid "Sessions authorized"
-msgstr ""
+msgstr "Sesiuni autorizate"
 
 msgid "Sessions paused"
-msgstr ""
+msgstr "Sesiuni întrerupte"
 
 msgid "sessions paused"
-msgstr ""
+msgstr "sesiuni întrerupte"
 
 msgid "Sessions reactivated"
-msgstr ""
+msgstr "Sesiuni reactivate"
 
 msgid "Sessions reported"
-msgstr ""
+msgstr "Sesiuni raportate"
 
 msgid "Sessions terminated"
-msgstr ""
+msgstr "Sesiuni terminate"
 
 msgid "Show brief report"
-msgstr ""
+msgstr "Arată un raport scurt"
 
 msgid "Show detailed report"
-msgstr ""
+msgstr "Arată raportul detaliat"
 
 msgid "Show detailed session history messages"
-msgstr ""
+msgstr "Arată detaliat istoricul mesajelor sesiunilor"
 
 msgid "Show the detailed session history"
-msgstr ""
+msgstr "Arată istoricul detaliat al sesiunilor"
 
 msgid "Some delivery executions have not been authorized"
-msgstr ""
+msgstr "Unele execuții de livrare nu au fost autorizate"
 
 msgid "Some delivery executions have not been paused"
-msgstr ""
+msgstr "Unele execuții de livrare nu au fost întrerupte"
 
 msgid "Some delivery executions have not been reactivated"
-msgstr ""
+msgstr "Unele execuții de livrare nu au fost reactivate"
 
 msgid "Some delivery executions have not been reported"
-msgstr ""
+msgstr "Unele execuţii ale livrării nu au fost raportate"
 
 msgid "Some delivery executions have not been terminated"
-msgstr ""
+msgstr "Unele execuții de livrare nu au fost terminate"
 
 msgid "Some delivery executions have not been updated"
-msgstr ""
+msgstr "Unele execuții de livrare nu au fost actualizate"
 
 msgid "Something went wrong ..."
-msgstr ""
+msgstr "Ceva nu a mers bine..."
 
 msgid "Start"
-msgstr ""
+msgstr "Pornire"
 
 msgid "Start date of the export"
-msgstr ""
+msgstr "Data de început a exportului"
 
 msgid "Started at"
-msgstr ""
+msgstr "Început la"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "subcategory"
-msgstr ""
+msgstr "subcategorie"
 
 msgid "Subcategory"
-msgstr ""
+msgstr "Subcategorie"
 
 msgid "System generated pause."
-msgstr ""
+msgstr "Pauză generată de sistem."
 
 msgid "Tables successfully altered"
-msgstr ""
+msgstr "Tabele modificate cu succes"
 
 msgid "Take or continue a test controlled by a proctor"
-msgstr ""
+msgstr "Efectuați sau continuați un test controlat de un proctor"
 
 msgid "TAO: User Authorization"
-msgstr ""
+msgstr "TAO: Autorizare utilizator"
 
 msgid "Technical"
-msgstr ""
+msgstr "Tehnică"
 
 msgid "Terminate"
-msgstr ""
+msgstr "Terminare"
 
 msgid "Terminate and irregularity"
-msgstr ""
+msgstr "Încetarea și neregularitatea"
 
 msgid "Terminate Session"
-msgstr ""
+msgstr "Terminare sesiune"
 
 msgid "Terminate session"
-msgstr ""
+msgstr "Închide sesiunea"
 
 msgid "Terminate sessions"
-msgstr ""
+msgstr "Încheie sesiunile"
 
 msgid "Terminate/Reactivate"
-msgstr ""
+msgstr "Terminare/Reactivare"
 
 msgid "Terminate/Reactivate and irregularity"
-msgstr ""
+msgstr "Terminare/Reactivare și neregularitate"
 
 msgid "terminated"
-msgstr ""
+msgstr "terminat"
 
 msgid "Terminated"
-msgstr ""
+msgstr "Terminat"
 
 msgid "Test  must be terminated."
-msgstr ""
+msgstr "Testul trebuie să fie încheiat."
 
 msgid "Test %s had already been authorized."
-msgstr ""
+msgstr "Testul %s a fost deja autorizat."
 
 msgid "Test %s had already been paused."
-msgstr ""
+msgstr "Testul %s a fost deja întrerupt."
 
 msgid "Test %s had already been terminated."
-msgstr ""
+msgstr "Testul %s a fost deja terminat."
 
 msgid "Test %s had been canceled."
-msgstr ""
+msgstr "Testul %s a fost anulat."
 
 msgid "Test %s had been completed."
-msgstr ""
+msgstr "Testul %s a fost finalizat."
 
 msgid "Test %s had been paused."
-msgstr ""
+msgstr "Testul %s a fost întrerupt."
 
 msgid "Test %s had been terminated."
-msgstr ""
+msgstr "Testul %s a fost terminat."
 
 msgid "Test %s had not been finished."
-msgstr ""
+msgstr "Testul %s nu a fost finalizat."
 
 msgid "Test %s had not been in progress."
-msgstr ""
+msgstr "Testul %s nu a fost în desfășurare."
 
 msgid "Test %s had not been started."
-msgstr ""
+msgstr "Testul %s nu a fost pornit."
 
 msgid "Test %s must be terminated."
-msgstr ""
+msgstr "Testul %s trebuie să fie terminat."
 
 msgid "Test center saved"
-msgstr ""
+msgstr "Centrul de testare salvat"
 
 msgid "Test had already been authorized."
-msgstr ""
+msgstr "Testul fusese deja autorizat."
 
 msgid "Test had already been paused."
-msgstr ""
+msgstr "Testul fusese deja întrerupt."
 
 msgid "Test had alredy been terminated."
-msgstr ""
+msgstr "Testul a fost deja terminat."
 
 msgid "Test had been canceled."
-msgstr ""
+msgstr "Testul a fost anulat."
 
 msgid "Test had been completed."
-msgstr ""
+msgstr "Testul a fost finalizat."
 
 msgid "Test had been paused."
-msgstr ""
+msgstr "Testul a fost întrerupt."
 
 msgid "Test had been terminated."
-msgstr ""
+msgstr "Testul a fost terminat."
 
 msgid "Test had not been finished."
-msgstr ""
+msgstr "Testul nu a fost finalizat."
 
 msgid "Test had not been in progress."
-msgstr ""
+msgstr "Testul nu a fost în curs de desfăşurare."
 
 msgid "Test had not been started."
-msgstr ""
+msgstr "Testul nu a fost pornit."
 
 msgid "test has no time limits"
-msgstr ""
+msgstr "testul nu are termene limită"
 
 msgid "Test site %s"
-msgstr ""
+msgstr "Testare site %s"
 
 msgid "Test taker"
-msgstr ""
+msgstr "Trezoreria de încercare"
 
 msgid "test taker"
-msgstr ""
+msgstr "luator de test"
 
 msgid "Test takers have been added"
-msgstr ""
+msgstr "Au fost adăugate lupte de test"
 
 msgid "Test takers have been removed"
-msgstr ""
+msgstr "Testarea lupușilor a fost eliminată"
 
 msgid "Test Variables"
-msgstr ""
+msgstr "Variabile de test"
 
 msgid "Test-Taker"
-msgstr ""
+msgstr "Test-Căutător"
 
 msgid "Testing Workstation"
-msgstr ""
+msgstr "Testarea stării de lucru"
 
 msgid "The action cannot be applied, no eligible sessions found"
-msgstr ""
+msgstr "Acțiunea nu poate fi aplicată, nu s-au găsit sesiuni eligibile"
 
 msgid "The action will be applied to the following session(s)"
-msgstr ""
+msgstr "Acțiunea va fi aplicată următoarelor sesiuni/sesiuni"
 
 msgid "the already granted time will be replaced by the new value"
-msgstr ""
+msgstr "data deja acordată va fi înlocuită cu noua valoare;"
 
 msgid "The assessment has been suspended. To resume your assessment, please relaunch it and contact your proctor if required."
-msgstr ""
+msgstr "Evaluarea a fost suspendată. Pentru a relua evaluarea, vă rugăm să o reporniți și să contactați proctorul dacă este necesar."
 
 msgid "The assessment has been terminated. You cannot interact with it anymore."
-msgstr ""
+msgstr "Evaluarea a fost terminată. Nu mai puteți interacționa cu ea."
 
 msgid "The assessment has been terminated. You cannot interact with it anymore. Please contact your proctor if required."
-msgstr ""
+msgstr "Evaluarea a fost terminată. Nu mai puteți interacționa cu ea. Vă rugăm să contactați proctorul dacă este necesar."
 
 msgid "The assessment was automatically terminated by the system due to inactivity."
-msgstr ""
+msgstr "Evaluarea a fost terminată automat de către sistem din cauza inactivității."
 
 msgid "The decreased time cannot be higher than remaining time %s"
-msgstr ""
+msgstr "Timpul scăzut nu poate fi mai mare decât timpul rămas %s"
 
 msgid "The extra time must be a number"
-msgstr ""
+msgstr "Timpul suplimentar trebuie să fie un număr"
 
 msgid "The extra time must be a number bigger than 0"
-msgstr ""
+msgstr "Timpul suplimentar trebuie să fie un număr mai mare decât 0"
 
 msgid "The increased time, when added to the remaining time, %s cannot be higher than the overall time granted for this timer %s"
-msgstr ""
+msgstr "Timpul mărit, când a fost adăugat la timpul rămas, %s nu poate fi mai mare decât timpul total acordat pentru acest temporizator %s"
 
 msgid "The proctor will be authorized. Continue ?"
-msgstr ""
+msgstr "Procurorul va fi autorizat. Continuați?"
 
 msgid "The proctor will be revoked. Continue ?"
-msgstr ""
+msgstr "Procesorul va fi revocat. Continuați?"
 
 msgid "The proctors will be authorized. Continue ?"
-msgstr ""
+msgstr "Procurorii vor fi autorizați. Continuați?"
 
 msgid "The proctors will be revoked. Continue ?"
-msgstr ""
+msgstr "Proctoarele vor fi revocate. Continuați?"
 
 msgid "The test taker will be removed from this session. Continue ?"
-msgstr ""
+msgstr "Verificatorul de test va fi eliminat din această sesiune. Continuați?"
 
 msgid "The test takers will be removed from this session. Continue ?"
-msgstr ""
+msgstr "Testele vor fi eliminate din această sesiune. Continuați?"
 
 msgid "There is no delivery in progress"
-msgstr ""
+msgstr "Nu există nicio realizare în curs"
 
 msgid "Time"
-msgstr ""
+msgstr "Timp"
 
 msgid "Time adjusted"
-msgstr ""
+msgstr "Timp ajustat"
 
 msgid "Time decrease is too high"
-msgstr ""
+msgstr "Reducerea timpului este prea mare"
 
 msgid "Time increase is too high"
-msgstr ""
+msgstr "Creşterea timpului este prea mare"
 
 #, tao-public
 msgid "Tools"
-msgstr ""
+msgstr "Unelte"
 
 msgid "Total Current Assessments"
-msgstr ""
+msgstr "Total evaluări curente"
 
 msgid "Total time"
-msgstr ""
+msgstr "Timp total"
 
 msgid "Unable to create irregularities export for %s"
-msgstr ""
+msgstr "Imposibil de creat neregularități de export pentru %s"
 
 msgid "Unable to perform action on test %s."
-msgstr ""
+msgstr "Nu se poate efectua acțiunea la testul %s."
 
 msgid "Unexpected response"
-msgstr ""
+msgstr "Răspuns neașteptat"
 
 msgid "User Activity"
-msgstr ""
+msgstr "Activitatea utilizatorului"
 
 msgid "Warning, you are about to pause all in progress tests. All test takers will be paused on or before the next heartbeat. Please provide a reason for this action."
-msgstr ""
+msgstr "Atenție, sunteți pe cale să întrerupeți toate testele de progres. Toate persoanele care iau testul vor fi întrerupte pe sau înainte de următoarea bătăi ale inimii. Vă rugăm să oferiți un motiv pentru această acțiune."
 
 msgid "Weather"
-msgstr ""
+msgstr "Vreme"
 
