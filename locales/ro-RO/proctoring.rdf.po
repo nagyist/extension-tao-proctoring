@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tao-open-source\n"
+"PO-Revision-Date: 2026-03-24 16:07\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: ro\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: en-US\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
+"X-Crowdin-Project: tao-open-source\n"
+"X-Crowdin-Project-ID: 590867\n"
+"X-Crowdin-Language: ro\n"
+"X-Crowdin-File: /[oat-sa.extension-tao-proctoring] develop/locales/en-US/proctoring.rdf.po\n"
+"X-Crowdin-File-ID: 1223\n"
+"Language-Team: Romanian\n"
+
+# http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Proctor"
+msgstr "Proctor"
+
+# http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Proctoring role"
+msgstr "Rolul de protecție"
+
+# http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorManager
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Proctor Manager"
+msgstr "Manager Proctor"
+
+# http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorManager
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Proctoring Manager Role"
+msgstr "Rolul managerului Proctoring"
+
+# http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorAdministratorRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Proctor Administrator"
+msgstr "Administrator Proctor"
+
+# http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorAdministratorRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Proctoring Administrator Role"
+msgstr "Rolul administratorului de protecție"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAwaiting
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Awaiting"
+msgstr "Asteapta"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAwaiting
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Awaiting of authorization status of a delivery execution"
+msgstr "În așteptarea stării de autorizare a executării unei livrări"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAuthorized
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Authorized"
+msgstr "Autorizat"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAuthorized
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Authorized status of a delivery execution"
+msgstr "Statusul autorizat al executării unei livrări"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusTerminated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Terminated"
+msgstr "Terminat"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusTerminated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Terminated status of a delivery execution"
+msgstr "Statutul încetat de execuție a livrării"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusCanceled
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Canceled"
+msgstr "Anulat"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusCanceled
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Canceled status of a delivery execution"
+msgstr "Starea anulată a executării livrării"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Proctoring Settings"
+msgstr "Setări proctoring"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Require Proctoring on selected deliveries"
+msgstr "Necesită Proctoring pentru livrările selectate"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#CheckMode
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Check Enable"
+msgstr "Verificare activare"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#CheckMode
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Check Enable"
+msgstr "Verificare activare"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Require authorization"
+msgstr "Necesită autorizare"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Enable"
+msgstr "Activare"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Require Proctoring"
+msgstr "Necesită protejare"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Enable"
+msgstr "Activare"
+
+# http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorAdministratorRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Proctoring Administrator role"
+msgstr "Rolul de administrator proctoring"
+
