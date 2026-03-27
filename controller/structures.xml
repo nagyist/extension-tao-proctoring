@@ -5,7 +5,7 @@
         <sections>
             <section id="manage_results" name="Manage Results" url="/taoOutcomeUi/Results/index">
                 <actions>
-                    <action id="irregularity-export" name="Export Irregularities" url="/taoProctoring/Irregularity/index" group="tree" context="instance">
+                    <action id="irregularity-export" name="Export Irregularities" url="/taoProctoring/Irregularity/index" group="tree" context="instance" weight="7">
                         <icon id="icon-export"/>
                     </action>
                 </actions>
