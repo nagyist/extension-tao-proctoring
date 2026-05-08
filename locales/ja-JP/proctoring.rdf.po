@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tao-open-source\n"
-"PO-Revision-Date: 2023-06-07 15:17\n"
+"PO-Revision-Date: 2026-03-24 16:07\n"
 "Last-Translator: TAO Translation Team <translation@tao.lu>\n"
 "MIME-Version: 1.0\n"
 "Language: ja\n"
@@ -14,121 +14,121 @@ msgstr ""
 "X-Crowdin-Project-ID: 590867\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /[oat-sa.extension-tao-proctoring] develop/locales/en-US/proctoring.rdf.po\n"
-"X-Crowdin-File-ID: 705\n"
+"X-Crowdin-File-ID: 1223\n"
 "Language-Team: Japanese\n"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorRole
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Proctor"
-msgstr "試検監督者"
+msgstr "Proctor"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorRole
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "The Proctoring role"
-msgstr ""
+msgstr "プロクタリングの役割"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorManager
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Proctor Manager"
-msgstr "試検監督者管理"
+msgstr "プロクター・マネージャー"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorManager
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "The Proctoring Manager Role"
-msgstr ""
+msgstr "Proctoring Manager ロール"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorAdministratorRole
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Proctor Administrator"
-msgstr ""
+msgstr "プロクター管理者"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorAdministratorRole
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "The Proctoring Administrator Role"
-msgstr ""
+msgstr "Proctoring管理者ロール"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAwaiting
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Awaiting"
-msgstr "待機中"
+msgstr "お待ちください"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAwaiting
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Awaiting of authorization status of a delivery execution"
-msgstr "デリバリ実施の承認待ちステータス"
+msgstr "配送の承認ステータスの待機中"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAuthorized
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Authorized"
-msgstr "承認済"
+msgstr "承認済み"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAuthorized
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Authorized status of a delivery execution"
-msgstr "デリバリ実行の承認済ステータス"
+msgstr "指定された配送の状態"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusTerminated
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Terminated"
-msgstr "終了済み"
+msgstr "終了"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusTerminated
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Terminated status of a delivery execution"
-msgstr "デリバリ実行の終了ステータス"
+msgstr "配信の終了状態"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusCanceled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Canceled"
-msgstr "キャンセル済み"
+msgstr "キャンセルしました"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusCanceled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Canceled status of a delivery execution"
-msgstr "デリバリ実行のキャンセルステータス"
+msgstr "配信のキャンセルされた状態"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Proctoring Settings"
-msgstr "試験監督設定"
+msgstr "Proctoring Settings"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Require Proctoring on selected deliveries"
-msgstr "選択デリバリの試検監督者の要求"
+msgstr "選択された配送にプロクタリングが必要"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#CheckMode
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Check Enable"
-msgstr "有効化チェック"
+msgstr "有効にする"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#CheckMode
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Check Enable"
-msgstr "有効化チェック"
+msgstr "有効にする"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Require authorization"
-msgstr "要承認"
+msgstr "認証が必要"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Enable"
-msgstr "有効"
+msgstr "有効にする"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Require Proctoring"
-msgstr "試検監督者の要求"
+msgstr "調整が必要"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Enable"
-msgstr "有効"
+msgstr "有効にする"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorAdministratorRole
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "The Proctoring Administrator role"
-msgstr ""
+msgstr "プロセス管理者のロール"
 

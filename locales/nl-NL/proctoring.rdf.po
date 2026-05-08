@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tao-open-source\n"
-"PO-Revision-Date: 2023-06-07 15:17\n"
+"PO-Revision-Date: 2026-03-24 16:07\n"
 "Last-Translator: TAO Translation Team <translation@tao.lu>\n"
 "MIME-Version: 1.0\n"
 "Language: nl\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-Project-ID: 590867\n"
 "X-Crowdin-Language: nl\n"
 "X-Crowdin-File: /[oat-sa.extension-tao-proctoring] develop/locales/en-US/proctoring.rdf.po\n"
-"X-Crowdin-File-ID: 705\n"
+"X-Crowdin-File-ID: 1223\n"
 "Language-Team: Dutch\n"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorRole
@@ -90,7 +90,7 @@ msgstr "Annuleringsstatus van een uitlevering"
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Proctoring Settings"
-msgstr ""
+msgstr "Proctoring Instellingen"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -100,22 +100,22 @@ msgstr "Toezichthouder vereist op geselecteerde publicaties"
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#CheckMode
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Check Enable"
-msgstr ""
+msgstr "Controleer inschakelen"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#CheckMode
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Check Enable"
-msgstr ""
+msgstr "Controleer inschakelen"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Require authorization"
-msgstr ""
+msgstr "Autorisatie vereist"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "Enable"
-msgstr ""
+msgstr "Inschakelen"
 
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ProctorAccessible
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
@@ -125,10 +125,10 @@ msgstr "Toezichthouder vereist"
 # http://www.tao.lu/Ontologies/TAODelivery.rdf#ComplyEnabled
 msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
 msgid "Enable"
-msgstr ""
+msgstr "Inschakelen"
 
 # http://www.tao.lu/Ontologies/TAOProctor.rdf#ProctorAdministratorRole
 msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
 msgid "The Proctoring Administrator role"
-msgstr ""
+msgstr "De beheerdersrol van de Proctoring"
 

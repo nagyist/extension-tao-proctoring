@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tao-open-source\n"
-"PO-Revision-Date: 2024-04-09 07:35\n"
+"PO-Revision-Date: 2026-03-24 16:05\n"
 "Last-Translator: TAO Translation Team <translation@tao.lu>\n"
 "MIME-Version: 1.0\n"
 "Language: fr\n"
@@ -184,7 +184,7 @@ msgid "Authorization status"
 msgstr "Statut de l'autorisation"
 
 msgid "Authorize"
-msgstr ""
+msgstr "Autoriser"
 
 msgid "Authorize session"
 msgstr "Autoriser la session"
@@ -202,7 +202,7 @@ msgid "Authorize the selected proctors"
 msgstr "Autoriser les surveillants sélectionnés"
 
 msgid "Authorized"
-msgstr ""
+msgstr "Autorisé"
 
 msgid "authorized"
 msgstr "autorisé"
@@ -232,7 +232,7 @@ msgid "Automatically reset by the system due to the test taker choosing not to p
 msgstr "Remis par défaut automatiquement par le système dû au choix du participant de ne pas continuer avec le test autorisé."
 
 msgid "Available"
-msgstr ""
+msgstr "Disponible"
 
 msgid "Available history"
 msgstr "Historique disponible"
@@ -262,7 +262,7 @@ msgid "cancel"
 msgstr "annuler"
 
 msgid "cancel the action"
-msgstr ""
+msgstr "annuler l'action"
 
 msgid "canceled"
 msgstr "annulé"
@@ -340,7 +340,7 @@ msgid "Complaint"
 msgstr "Réclamation"
 
 msgid "Completed"
-msgstr ""
+msgstr "Terminé"
 
 msgid "completed"
 msgstr "terminé"
@@ -391,7 +391,7 @@ msgid "Deliveries"
 msgstr "Passations"
 
 msgid "Delivery"
-msgstr ""
+msgstr "Envoi"
 
 msgid "Detailed Session History of %s"
 msgstr "Historique de session détaillé de %s"
@@ -436,7 +436,7 @@ msgid "Examinee"
 msgstr "Examiné"
 
 msgid "Export"
-msgstr ""
+msgstr "Exportation"
 
 #, tao-public
 msgid "Export Irregularities"
@@ -470,7 +470,7 @@ msgid "finished"
 msgstr "terminé"
 
 msgid "First name"
-msgstr ""
+msgstr "Prénom"
 
 msgid "Freezing"
 msgstr "Gelé"
@@ -530,7 +530,7 @@ msgid "Last Month"
 msgstr "Le mois dernier"
 
 msgid "Last name"
-msgstr ""
+msgstr "Nom de famille"
 
 msgid "Last Week"
 msgstr "Semaine dernière"
@@ -548,7 +548,7 @@ msgid "Logout"
 msgstr "Déconnexion"
 
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu principal"
 
 msgid "Manage Proctors"
 msgstr "Gestion des surveillants d'examen"
@@ -618,7 +618,7 @@ msgid "offline"
 msgstr "non connecté"
 
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 msgid "online"
 msgstr "en ligne"
@@ -633,7 +633,7 @@ msgid "Partially authorized proctors"
 msgstr "Surveillants d'examen partiellement autorisés"
 
 msgid "Pause"
-msgstr ""
+msgstr "Mettre en pause"
 
 msgid "Pause Active Test Sessions"
 msgstr "Mettre en pause les sessions de test actives"
@@ -793,7 +793,7 @@ msgid "Role"
 msgstr "Rôle"
 
 msgid "Score"
-msgstr ""
+msgstr "Score"
 
 msgid "Score Report"
 msgstr "Rapport de notation"
@@ -811,13 +811,13 @@ msgid "Session %s - %s has not been processed"
 msgstr "La session %s - %s n'a pas été traitée."
 
 msgid "Session history"
-msgstr ""
+msgstr "Historique de la session"
 
 msgid "Session time handling"
 msgstr "Durée de vie de la session"
 
 msgid "Sessions"
-msgstr ""
+msgstr "Sessions"
 
 msgid "sessions"
 msgstr "sessions"
@@ -883,7 +883,7 @@ msgid "Started at"
 msgstr "Démarré à"
 
 msgid "Status"
-msgstr ""
+msgstr "Statut"
 
 msgid "subcategory"
 msgstr "sous-catégorie"
